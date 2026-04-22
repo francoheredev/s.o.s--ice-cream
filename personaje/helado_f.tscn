@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://beb5n1t4autmm" path="res://personaje/helado_f.gd" id="1_7qoda"]
 [ext_resource type="Texture2D" uid="uid://y6j2ex8onbc1" path="res://arte/knight.png" id="1_f7sk4"]
 [ext_resource type="PackedScene" uid="uid://bn0gjt05dclct" path="res://particulas/death_particles.tscn" id="2_0l4dv"]
+[ext_resource type="PackedScene" uid="uid://dmnfvvb1qbd5g" path="res://particulas/particulascorrer.tscn" id="4_gf25q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jc6e"]
 atlas = ExtResource("1_f7sk4")
@@ -240,6 +241,59 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_80a3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2x7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qslm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xlyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcbgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlc5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyfuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf3yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u16iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4f3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85a48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r46nu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hky3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2mrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3prxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pdid")
+}],
+"loop": true,
+"name": &"izq",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_56yco")
 }, {
 "duration": 1.0,
@@ -254,11 +308,6 @@ animations = [{
 "loop": true,
 "name": &"izq2",
 "speed": 4.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qark5"]
@@ -269,29 +318,14 @@ height = 16.0
 scale = Vector2(2.5, 2.5)
 script = ExtResource("1_7qoda")
 death_particles_scene = ExtResource("2_0l4dv")
-walk_speed = null
-run_speed = null
-ground_accel = null
-air_accel = null
-friction = null
-skid_friction = null
-gravity = null
-low_gravity = null
-fall_gravity = null
-jump_force = null
-jump_cut = null
-jump_horizontal_boost = null
-coyote_time = null
-jump_buffer_time = null
-wall_slide_speed = null
-wall_slide_accel = null
-wall_jump_force = null
-wall_jump_lock_time = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=786968593]
 sprite_frames = SubResource("SpriteFrames_x1cl1")
-animation = &"death"
+animation = &"izq"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=189343663]
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_qark5")
+
+[node name="RunParticles" parent="." unique_id=1491381801 instance=ExtResource("4_gf25q")]
+position = Vector2(0, 11.8)

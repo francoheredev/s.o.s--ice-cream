@@ -1,3 +1,25 @@
 [gd_scene format=3 uid="uid://dmnfvvb1qbd5g"]
 
-[node name="particulascorrer" type="GPUParticles2D" unique_id=1491381801]
+[sub_resource type="Gradient" id="Gradient_3frl7"]
+offsets = PackedFloat32Array(0, 0.5769231, 0.9395604)
+colors = PackedColorArray(0.9852058, 0.052410953, 0.57482535, 1, 0.8413724, 2.5990605e-06, 0.4899884, 1, 0.6136613, 9.866804e-06, 0.42515278, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3my0l"]
+gradient = SubResource("Gradient_3frl7")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3frl7"]
+particle_flag_disable_z = true
+spread = 60.0
+initial_velocity_min = 80.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, 200, 0)
+scale_min = 6.0
+scale_max = 7.0
+color = Color(1, 0, 1, 1)
+color_ramp = SubResource("GradientTexture1D_3my0l")
+
+[node name="RunParticles" type="GPUParticles2D" unique_id=1491381801]
+emitting = false
+amount = 40
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_3frl7")
