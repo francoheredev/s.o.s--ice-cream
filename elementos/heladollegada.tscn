@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://b0gdtblml52sw"]
+
+[ext_resource type="Texture2D" uid="uid://y6j2ex8onbc1" path="res://arte/knight.png" id="1_6i84x"]
+[ext_resource type="Script" uid="uid://bqhprpj0lmeao" path="res://elementos/heladollegada.gd" id="1_to2sk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6i84x"]
+height = 22.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f6l5"]
+atlas = ExtResource("1_6i84x")
+region = Rect2(64, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl0nr"]
+atlas = ExtResource("1_6i84x")
+region = Rect2(96, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ingpb"]
+atlas = ExtResource("1_6i84x")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j4yy"]
+atlas = ExtResource("1_6i84x")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd5l8"]
+atlas = ExtResource("1_6i84x")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffbfc"]
+atlas = ExtResource("1_6i84x")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3j4yy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f6l5")
+}],
+"loop": true,
+"name": &"completado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl0nr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ingpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j4yy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd5l8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffbfc")
+}],
+"loop": true,
+"name": &"quieto",
+"speed": 5.0
+}]
+
+[node name="heladollegada" type="Area2D" unique_id=815428152 groups=["goal"]]
+script = ExtResource("1_to2sk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1418411447]
+shape = SubResource("CapsuleShape2D_6i84x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=115998201]
+position = Vector2(-0.9999995, -6.0000005)
+scale = Vector2(1.15625, 1.21875)
+sprite_frames = SubResource("SpriteFrames_3j4yy")
+animation = &"completado"
+frame_progress = 0.102702126
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

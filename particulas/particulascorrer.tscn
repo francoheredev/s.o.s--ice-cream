@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dmnfvvb1qbd5g"]
+
+[node name="particulascorrer" type="GPUParticles2D" unique_id=1491381801]
