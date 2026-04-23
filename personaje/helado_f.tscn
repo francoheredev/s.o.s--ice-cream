@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://y6j2ex8onbc1" path="res://arte/knight.png" id="1_f7sk4"]
 [ext_resource type="PackedScene" uid="uid://bn0gjt05dclct" path="res://particulas/death_particles.tscn" id="2_0l4dv"]
 [ext_resource type="PackedScene" uid="uid://dmnfvvb1qbd5g" path="res://particulas/particulascorrer.tscn" id="4_gf25q"]
+[ext_resource type="Texture2D" uid="uid://dp61ehqypeh8i" path="res://arte/heladopj.png" id="4_xub0u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jc6e"]
 atlas = ExtResource("1_f7sk4")
@@ -101,21 +102,9 @@ region = Rect2(160, 160, 32, 32)
 atlas = ExtResource("1_f7sk4")
 region = Rect2(192, 160, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v0mtm"]
-atlas = ExtResource("1_f7sk4")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6q32v"]
-atlas = ExtResource("1_f7sk4")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_su0j6"]
-atlas = ExtResource("1_f7sk4")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mxubr"]
-atlas = ExtResource("1_f7sk4")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjhb4"]
+atlas = ExtResource("4_xub0u")
+region = Rect2(0, 0, 49, 62)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_56yco"]
 atlas = ExtResource("1_f7sk4")
@@ -224,16 +213,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v0mtm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6q32v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_su0j6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mxubr")
+"texture": SubResource("AtlasTexture_bjhb4")
 }],
 "loop": true,
 "name": &"idle",
@@ -310,22 +290,20 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qark5"]
-radius = 5.0
-height = 16.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xub0u"]
+radius = 24.0
+height = 64.0
 
 [node name="HeladoF" type="CharacterBody2D" unique_id=1008702425 groups=["player"]]
-scale = Vector2(2.5, 2.5)
 script = ExtResource("1_7qoda")
 death_particles_scene = ExtResource("2_0l4dv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=786968593]
 sprite_frames = SubResource("SpriteFrames_x1cl1")
-animation = &"izq"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=189343663]
-position = Vector2(0, 4)
-shape = SubResource("CapsuleShape2D_qark5")
+shape = SubResource("CapsuleShape2D_xub0u")
 
 [node name="RunParticles" parent="." unique_id=1491381801 instance=ExtResource("4_gf25q")]
-position = Vector2(0, 11.8)
+position = Vector2(0, 31)

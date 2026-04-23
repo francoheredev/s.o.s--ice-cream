@@ -76,25 +76,7 @@ tile_map_data = PackedByteArray("AAAAABAAAQAEAAIAAAABABAAAQAEAAIAAAACABAAAQAEAAI
 tile_set = SubResource("TileSet_v8ff1")
 
 [node name="HeladoF" parent="." unique_id=1191648017 instance=ExtResource("2_6d4b5")]
-position = Vector2(61.00003, 506)
-walk_speed = 500
-run_speed = 720
-ground_accel = 18000.0
-air_accel = 8000.0
-friction = 12000.0
-skid_friction = 26000.0
-gravity = 5000
-low_gravity = 2500
-fall_gravity = 8000.0
-jump_force = -900
-jump_cut = 0.3
-jump_horizontal_boost = 0.15
-coyote_time = 0.08
-jump_buffer_time = 0.08
-wall_slide_speed = 200
-wall_slide_accel = 5000
-wall_jump_force = Vector2(800, -1100)
-wall_jump_lock_time = 0.05
+position = Vector2(75, 494)
 
 [node name="heladollegada" parent="." unique_id=815428152 instance=ExtResource("3_41bl6")]
 position = Vector2(547, 247)
