@@ -50,12 +50,17 @@ var jump_buffer_timer := 0.0
 var wall_jump_lock_timer := 0.0
 
 # --------------------
+# DIRECCIÓN (NUEVO 🔥)
+# --------------------
+var last_dir := 1  # 1 = derecha, -1 = izquierda
+
+# --------------------
 # MUERTE
 # --------------------
 var dead := false
 
 @onready var anim = $AnimatedSprite2D
-@onready var run_particles = $RunParticles  # 🔥 NUEVO
+@onready var run_particles = $RunParticles
 
 
 func _physics_process(delta):
@@ -154,14 +159,13 @@ func _physics_process(delta):
 		velocity.y *= jump_cut
 
 	# --------------------
-	# RUN PARTICLES 🔥
+	# RUN PARTICLES
 	# --------------------
 	var is_moving = abs(velocity.x) > 80
 
 	if on_floor and is_moving:
 		run_particles.emitting = true
 		
-		# salen desde atrás del personaje
 		if velocity.x > 0:
 			run_particles.position.x = -6
 		else:
@@ -171,7 +175,13 @@ func _physics_process(delta):
 
 	move_and_slide()
 	update_animations(input_dir)
-
+# --------------------
+# MUERTE
+# --------------------
+# --------------------
+# MUERTE
+# --------------------
+var dying := false
 
 # --------------------
 # MUERTE
@@ -200,8 +210,6 @@ func die():
 	await get_tree().create_timer(0.2).timeout
 
 	get_tree().reload_current_scene()
-
-
 # --------------------
 # ANIMACIONES
 # --------------------
@@ -209,10 +217,19 @@ func update_animations(input_dir):
 	var dir = Input.get_axis("move_left", "move_right")
 	var is_running = Input.is_action_pressed("run")
 
+	# 🔥 Guardar última dirección
+	if dir != 0:
+		last_dir = dir
+
+	# IDLE
 	if dir == 0:
-		play_anim("idle")
+		if last_dir > 0:
+			play_anim("idleder")
+		else:
+			play_anim("idleizq")
 		return
 
+	# CAMINAR
 	if not is_running:
 		if dir > 0:
 			play_anim("der")
@@ -220,6 +237,7 @@ func update_animations(input_dir):
 			play_anim("izq")
 		return
 
+	# CORRER
 	if dir > 0:
 		play_anim("der2")
 	else:
