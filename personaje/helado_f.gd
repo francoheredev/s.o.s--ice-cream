@@ -216,10 +216,19 @@ func die():
 func update_animations(input_dir):
 	var dir = Input.get_axis("move_left", "move_right")
 	var is_running = Input.is_action_pressed("run")
-
+	var on_floor = is_on_floor()
 	# 🔥 Guardar última dirección
 	if dir != 0:
 		last_dir = dir
+	# --------------------
+	# SALTO / AIRE
+	# --------------------
+	if not on_floor:
+		if last_dir > 0:
+			play_anim("saltoder")
+		else:
+			play_anim("saltoizq")
+		return
 
 	# IDLE
 	if dir == 0:
