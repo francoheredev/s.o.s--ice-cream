@@ -289,6 +289,7 @@ tile_set = SubResource("TileSet_lrvwv")
 
 [node name="HeladoF" parent="." unique_id=1191648017 instance=ExtResource("2_6d4b5")]
 position = Vector2(75, 494)
+scale = Vector2(0.6, 0.6)
 
 [node name="heladollegada" parent="." unique_id=815428152 instance=ExtResource("3_41bl6")]
 position = Vector2(547, 247)
