@@ -121,6 +121,38 @@
 [ext_resource type="Texture2D" uid="uid://qgoq5kbxwx71" path="res://arte/personaje 10089.png" id="112_yatht"]
 [ext_resource type="Texture2D" uid="uid://crb387iw0hjff" path="res://arte/personaje 10090.png" id="113_i3v1y"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rgl8"]
+atlas = ExtResource("24_lr0fa")
+region = Rect2(0, 0, 64, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23x2b"]
+atlas = ExtResource("25_13blu")
+region = Rect2(0, 0, 64, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3khwl"]
+atlas = ExtResource("26_05ymg")
+region = Rect2(0, 0, 64, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0p5y"]
+atlas = ExtResource("27_3vcdo")
+region = Rect2(0, 0, 64, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psrwo"]
+atlas = ExtResource("28_bxe85")
+region = Rect2(0, 0, 64, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8mg6"]
+atlas = ExtResource("29_yimds")
+region = Rect2(0, 0, 64, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcpck"]
+atlas = ExtResource("30_6nrgw")
+region = Rect2(0, 0, 64, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glk0g"]
+atlas = ExtResource("31_ybd8x")
+region = Rect2(0, 0, 64, 71)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_yfsr7"]
 atlas = ExtResource("5_pu141")
 region = Rect2(0, 0, 67, 70)
@@ -591,7 +623,31 @@ region = Rect2(0, 0, 64, 71)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x1cl1"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rgl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23x2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3khwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0p5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psrwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8mg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcpck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glk0g")
+}],
 "loop": true,
 "name": &"death",
 "speed": 5.0
@@ -1465,8 +1521,9 @@ death_particles_scene = ExtResource("2_0l4dv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=786968593]
 position = Vector2(2, 1)
 sprite_frames = SubResource("SpriteFrames_x1cl1")
-animation = &"death"
+animation = &"izq"
 autoplay = "idleder"
+frame_progress = 0.49435252
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=189343663]
 position = Vector2(1, -2)

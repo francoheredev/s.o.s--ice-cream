@@ -753,4 +753,14 @@ sprite_frames = SubResource("SpriteFrames_3j4yy")
 animation = &"quieto"
 frame_progress = 0.4626364
 
+[node name="Label" type="Label" parent="." unique_id=132715549]
+visible = false
+offset_left = -69.0
+offset_top = -44.0
+offset_right = 72.0
+offset_bottom = -21.0
+text = "HELP ME PLEASE!!!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1800170153]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

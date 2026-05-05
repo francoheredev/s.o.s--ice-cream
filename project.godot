@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="S.O.S: Ice Cream"
-run/main_scene="res://personaje/nivel de prueba/nivel_1.tscn"
+run/main_scene="uid://dqg383clasdob"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -25,6 +25,7 @@ GameManager="*uid://g8fclegqev3w"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
