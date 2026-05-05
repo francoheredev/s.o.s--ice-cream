@@ -1,25 +1,26 @@
-[gd_scene format=3 uid="uid://c0u66ydpprkih"]
+[gd_scene format=3 uid="uid://dl4h7q0qtes7"]
 
-[ext_resource type="Texture2D" uid="uid://2e5xkqley3a4" path="res://arte/MillPropeller_A_64x64.png" id="1_6gb42"]
-[ext_resource type="Script" uid="uid://c4qln00unj0ra" path="res://elementos/hazard.gd" id="1_x0n52"]
+[ext_resource type="Script" uid="uid://c4qln00unj0ra" path="res://elementos/hazard.gd" id="1_u032k"]
+[ext_resource type="Texture2D" uid="uid://2e5xkqley3a4" path="res://arte/MillPropeller_A_64x64.png" id="2_j8c10"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_x0n52"]
-radius = 29.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1ciu"]
+radius = 32.0
+height = 1122.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvqkt"]
-atlas = ExtResource("1_6gb42")
+atlas = ExtResource("2_j8c10")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rdtnx"]
-atlas = ExtResource("1_6gb42")
+atlas = ExtResource("2_j8c10")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mtf0b"]
-atlas = ExtResource("1_6gb42")
+atlas = ExtResource("2_j8c10")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o62xr"]
-atlas = ExtResource("1_6gb42")
+atlas = ExtResource("2_j8c10")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8elg4"]
@@ -42,11 +43,12 @@ animations = [{
 "speed": 16.0
 }]
 
-[node name="Hazard" type="Area2D" unique_id=153175230]
-script = ExtResource("1_x0n52")
+[node name="Hazard2" type="Area2D" unique_id=153175230]
+script = ExtResource("1_u032k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1047027144]
-shape = SubResource("CircleShape2D_x0n52")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_g1ciu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2077953338]
 sprite_frames = SubResource("SpriteFrames_8elg4")

@@ -29,4 +29,4 @@ func level_complete():
 	await get_tree().create_timer(0.15).timeout
 
 	get_tree().paused = false
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://personaje/nivel de prueba/nivel_2.tscn")

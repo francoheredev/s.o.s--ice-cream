@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dypifg7k1g7ko"]
+
+[node name="menu" type="Control" unique_id=1651729675]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Button" type="Button" parent="." unique_id=95082186]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 251.0
+offset_right = 647.0
+offset_bottom = 383.0
+text = "Play
+"
