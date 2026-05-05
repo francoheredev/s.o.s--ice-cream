@@ -19,6 +19,7 @@ color = Color(1, 0, 1, 1)
 color_ramp = SubResource("GradientTexture1D_3my0l")
 
 [node name="RunParticles" type="GPUParticles2D" unique_id=1491381801]
+z_index = 1
 emitting = false
 amount = 40
 lifetime = 0.5
