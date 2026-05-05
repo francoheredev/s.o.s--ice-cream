@@ -1,0 +1,200 @@
+[gd_scene format=4 uid="uid://wxgxycq0q7un"]
+
+[ext_resource type="Script" uid="uid://k826d7ukion3" path="res://personaje/nivel de prueba/nivel_1.gd" id="1_ol0td"]
+[ext_resource type="Texture2D" uid="uid://vqxqdy05qy53" path="res://arte/Autumn.png" id="2_ai75a"]
+[ext_resource type="PackedScene" uid="uid://dnp6b22uqnohl" path="res://personaje/helado_f.tscn" id="3_1col5"]
+[ext_resource type="PackedScene" uid="uid://b0gdtblml52sw" path="res://elementos/heladollegada.tscn" id="4_sfkl1"]
+[ext_resource type="Script" uid="uid://mgoo70igw42p" path="res://elementos/heladollegada3.gd" id="5_ai75a"]
+[ext_resource type="PackedScene" uid="uid://c0u66ydpprkih" path="res://elementos/hazard.tscn" id="5_cdqb5"]
+[ext_resource type="Texture2D" uid="uid://id55udihxdgn" path="res://arte/fondodefabrica.webp" id="7_1col5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lq457"]
+texture = ExtResource("2_ai75a")
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, 256, -152, 112, -158, -60, -196, -72, -230, -100, -256, -138, -256, -196, -196, -256, 256, -256, 256, 256)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 184, -256, 256, -180, 256, -108, 170, -60, 158, 98, 10, 256, -256, 256)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -52, -182, -94, 256, -92, 256, 256, -88, 256, -164, 180, -164, 102, -228, 78, -256, 26)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -90, 256, -88, 256, 256, -256, 256)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -88, 194, -92, 256, -24, 240, 62, 158, 102, 160, 184, 86, 256, -256, 256)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14, -256, 256, -256, 256, 256, -10, 256)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 10, -256, 8, 256, -256, 256)
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-86, -256, 256, -256, 256, 256, -80, 256)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 256, -256, 256, 256, -256, 256)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 86, -256, 82, 256, -256, 256)
+0:4/0 = 0
+1:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 256, -256, 256, 256, -256, 256)
+5:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+6:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_v8ff1"]
+tile_size = Vector2i(512, 512)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_lq457")
+
+[node name="nivel3" type="Node2D" unique_id=1556683979]
+script = ExtResource("1_ol0td")
+
+[node name="otoño" type="TileMapLayer" parent="." unique_id=897545126]
+position = Vector2(0, -3)
+scale = Vector2(0.075, 0.075)
+tile_map_data = PackedByteArray("AAAAAA4AAQAEAAMAAAAAAA8AAQAEAAMAAAAAABAAAQAEAAMAAAABAA4AAQAEAAMAAAABAA8AAQAEAAMAAAABABAAAQAEAAMAAAACAA4AAQAEAAMAAAACAA8AAQAEAAMAAAACABAAAQAEAAMAAAADAA4AAQAEAAMAAAADAA8AAQAEAAMAAAADABAAAQAEAAMAAAAEAA4AAQAEAAMAAAAEAA8AAQAEAAMAAAAEABAAAQAEAAMAAAAFAA4AAQAEAAMAAAAFAA8AAQAEAAMAAAAFABAAAQAEAAMAAAAGAA4AAQAEAAMAAAAGAA8AAQAEAAMAAAAGABAAAQAEAAMAAAAAAAoAAQAEAAMAAAAAAAsAAQAEAAMAAAAAAAwAAQAEAAMAAAAAAA0AAQAEAAMAAAAAAAkAAQAEAAMAAAABAAkAAQAEAAMAAAACAAkAAQAEAAMAAAADAAkAAQAEAAMAAAAAAAYAAQAEAAMAAAAAAAcAAQAEAAMAAAAAAAgAAQAEAAMAAAABAAYAAQAEAAMAAAABAAcAAQAEAAMAAAABAAgAAQAEAAMAAAACAAYAAQAEAAMAAAACAAcAAQAEAAMAAAACAAgAAQAEAAMAAAADAAYAAQAEAAMAAAADAAcAAQAEAAMAAAADAAgAAQAEAAMAAAAEAAYAAQAEAAMAAAAEAAcAAQAEAAMAAAAEAAgAAQAEAAMAAAAFAAYAAQAEAAMAAAAFAAcAAQAEAAMAAAAFAAgAAQAEAAMAAAAGAAYAAQAEAAMAAAAGAAcAAQAEAAMAAAAAAAIAAQAEAAMAAAAAAAMAAQAEAAMAAAAAAAQAAQAEAAMAAAAAAAUAAQAEAAMAAAAAAAAAAQAEAAMAAAAAAAEAAQAEAAMAAAABAAAAAQAEAAMAAAABAAEAAQAEAAMAAAACAAAAAQAEAAMAAAACAAEAAQAEAAMAAAADAAAAAQAEAAMAAAADAAEAAQAEAAMAAAAEAAAAAQAEAAMAAAAEAAEAAQAEAAMAAAAFAAAAAQAEAAMAAAAFAAEAAQAEAAMAAAAGAAAAAQAEAAMAAAAGAAEAAQAEAAMAAAAHAAAAAQAEAAMAAAAHAAEAAQAEAAMAAAABAAIAAQAEAAMAAAACAAIAAQAEAAMAAAADAAIAAQAEAAMAAAAEAAIAAQAEAAMAAAAFAAIAAQAEAAMAAAAGAAIAAQAEAAMAAAABAAMAAQAEAAMAAAABAAQAAQAEAAMAAAABAAUAAQAEAAMAAAACAAMAAQAEAAMAAAACAAQAAQAEAAMAAAACAAUAAQAEAAMAAAADAAMAAQAEAAMAAAADAAQAAQAEAAMAAAADAAUAAQAEAAMAAAAXAAAAAQAEAAMAAAAXAAEAAQAEAAMAAAAXAAIAAQAEAAMAAAAXAA4AAQAEAAMAAAAXAA8AAQAEAAMAAAAXABAAAQAEAAMAAAAYAAAAAQAEAAMAAAAYAAEAAQAEAAMAAAAYAAIAAQAEAAMAAAAYAA4AAQAEAAMAAAAYAA8AAQAEAAMAAAAYABAAAQAEAAMAAAAZAAAAAQAEAAMAAAAZAAEAAQAEAAMAAAAZAAIAAQAEAAMAAAAZAA4AAQAEAAMAAAAZAA8AAQAEAAMAAAAZABAAAQAEAAMAAAAaAAAAAQAEAAMAAAAaAAEAAQAEAAMAAAAaAAIAAQAEAAMAAAAaAAMAAQAEAAMAAAAaAAQAAQAEAAMAAAAaAAUAAQAEAAMAAAAaAAYAAQAEAAMAAAAaAAcAAQAEAAMAAAAaAAgAAQAEAAMAAAAaAAkAAQAEAAMAAAAaAA4AAQAEAAMAAAAaAA8AAQAEAAMAAAAaABAAAQAEAAMAAAAbAAAAAQAEAAMAAAAbAAEAAQAEAAMAAAAbAAIAAQAEAAMAAAAbAAYAAQAEAAMAAAAbAAcAAQAEAAMAAAAbAAgAAQAEAAMAAAAbAA4AAQAEAAMAAAAbAA8AAQAEAAMAAAAbABAAAQAEAAMAAAAcAAAAAQAEAAMAAAAcAAEAAQAEAAMAAAAcAAIAAQAEAAMAAAAcAAYAAQAEAAMAAAAcAAcAAQAEAAMAAAAcAAgAAQAEAAMAAAAcAA4AAQAEAAMAAAAcAA8AAQAEAAMAAAAcABAAAQAEAAMAAAAdAAAAAQAEAAMAAAAdAAEAAQAEAAMAAAAdAAIAAQAEAAMAAAAdAAYAAQAEAAMAAAAdAAcAAQAEAAMAAAAdAA4AAQAEAAMAAAAdAA8AAQAEAAMAAAAdABAAAQAEAAMAAAAeAAAAAQAEAAMAAAAeAAEAAQAEAAMAAAAdAAMAAQAEAAMAAAAdAAQAAQAEAAMAAAAdAAUAAQAEAAMAAAAdAAgAAQAEAAMAAAAdAAkAAQAEAAMAAAAdAAoAAQAEAAMAAAAbAAoAAQAEAAMAAAAbAAkAAQAEAAMAAAAcAAkAAQAEAAMAAAAcAAoAAQAEAAMAAAAaAAoAAQAEAAMAAAAbAAQAAQAEAAMAAAAbAAMAAQAEAAMAAAAcAAMAAQAEAAMAAAAcAAQAAQAEAAMAAAAcAAUAAQAEAAMAAAAbAAUAAQAEAAMAAAAWAA4AAQAEAAMAAAAWAA8AAQAEAAMAAAAWABAAAQAEAAMAAAAVAA4AAQAEAAMAAAAVAA8AAQAEAAMAAAAVABAAAQAEAAMAAAAZAAkAAQAEAAMAAAAYAAgAAQAEAAMAAAAXAAcAAQAEAAMAAAAXAAYAAQAEAAMAAAAZAAcAAQAEAAMAAAAYAAYAAQAEAAMAAAAZAAYAAQAEAAMAAAAYAAcAAQAEAAMAAAAZAAgAAQAEAAMAAAAdAAsAAQAEAAMAAAAdAAwAAQAEAAMAAAAdAA0AAQAEAAMAAAAFAA0AAQAEAAMAAAAGAA0AAQAEAAMAAAAHAAwAAQAEAAMAAAAHAA0AAQAEAAMAAAAHAA4AAQAEAAMAAAAIAAsAAQAEAAMAAAAIAAwAAQAEAAMAAAAIAA0AAQAEAAMAAAA=")
+tile_set = SubResource("TileSet_v8ff1")
+
+[node name="HeladoF" parent="." unique_id=1191648017 instance=ExtResource("3_1col5")]
+position = Vector2(75, 494)
+scale = Vector2(0.6, 0.6)
+
+[node name="heladollegada" parent="." unique_id=815428152 instance=ExtResource("4_sfkl1")]
+position = Vector2(1049, 521)
+script = ExtResource("5_ai75a")
+
+[node name="Hazard" parent="." unique_id=153175230 instance=ExtResource("5_cdqb5")]
+position = Vector2(237, 172)
+scale = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1276385965]
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer" unique_id=758703777]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 62.0
+offset_bottom = 43.0
+text = "00:00"
+
+[node name="DeathLabel" type="Label" parent="CanvasLayer" unique_id=233308635]
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 103.0
+offset_bottom = 73.0
+text = "Muertes: 0"
+
+[node name="Hazard2" parent="." unique_id=2142075478 instance=ExtResource("5_cdqb5")]
+position = Vector2(933, 170)
+scale = Vector2(2, 2)
+
+[node name="Hazard3" parent="." unique_id=678364807 instance=ExtResource("5_cdqb5")]
+position = Vector2(292, 704)
+scale = Vector2(2, 2)
+
+[node name="Hazard4" parent="." unique_id=557696488 instance=ExtResource("5_cdqb5")]
+position = Vector2(347, 704)
+scale = Vector2(2, 2)
+
+[node name="Hazard5" parent="." unique_id=1570736431 instance=ExtResource("5_cdqb5")]
+position = Vector2(402, 703)
+scale = Vector2(2, 2)
+
+[node name="Hazard6" parent="." unique_id=728335564 instance=ExtResource("5_cdqb5")]
+position = Vector2(457, 703)
+scale = Vector2(2, 2)
+
+[node name="Hazard7" parent="." unique_id=740151724 instance=ExtResource("5_cdqb5")]
+position = Vector2(514, 705)
+scale = Vector2(2, 2)
+
+[node name="Hazard8" parent="." unique_id=1159370352 instance=ExtResource("5_cdqb5")]
+position = Vector2(569, 705)
+scale = Vector2(2, 2)
+
+[node name="Hazard9" parent="." unique_id=853673612 instance=ExtResource("5_cdqb5")]
+position = Vector2(624, 704)
+scale = Vector2(2, 2)
+
+[node name="Hazard10" parent="." unique_id=920375461 instance=ExtResource("5_cdqb5")]
+position = Vector2(679, 704)
+scale = Vector2(2, 2)
+
+[node name="Hazard11" parent="." unique_id=2086282808 instance=ExtResource("5_cdqb5")]
+position = Vector2(444, 706)
+scale = Vector2(2, 2)
+
+[node name="Hazard12" parent="." unique_id=1260296023 instance=ExtResource("5_cdqb5")]
+position = Vector2(499, 706)
+scale = Vector2(2, 2)
+
+[node name="Hazard13" parent="." unique_id=1483747227 instance=ExtResource("5_cdqb5")]
+position = Vector2(554, 705)
+scale = Vector2(2, 2)
+
+[node name="Hazard14" parent="." unique_id=1435808506 instance=ExtResource("5_cdqb5")]
+position = Vector2(609, 705)
+scale = Vector2(2, 2)
+
+[node name="Hazard15" parent="." unique_id=617773804 instance=ExtResource("5_cdqb5")]
+position = Vector2(666, 707)
+scale = Vector2(2, 2)
+
+[node name="Hazard16" parent="." unique_id=1999608428 instance=ExtResource("5_cdqb5")]
+position = Vector2(721, 707)
+scale = Vector2(2, 2)
+
+[node name="Hazard17" parent="." unique_id=469474973 instance=ExtResource("5_cdqb5")]
+position = Vector2(776, 706)
+scale = Vector2(2, 2)
+
+[node name="Hazard18" parent="." unique_id=708405272 instance=ExtResource("5_cdqb5")]
+position = Vector2(831, 706)
+scale = Vector2(2, 2)
+
+[node name="Fondodefabrica" type="Sprite2D" parent="." unique_id=1525735330]
+z_index = -1
+position = Vector2(573.5, 286)
+scale = Vector2(1.42875, 1)
+texture = ExtResource("7_1col5")
+
+[connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard2" to="Hazard2" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard3" to="Hazard3" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard4" to="Hazard4" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard5" to="Hazard5" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard6" to="Hazard6" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard7" to="Hazard7" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard8" to="Hazard8" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard9" to="Hazard9" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard10" to="Hazard10" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard11" to="Hazard11" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard12" to="Hazard12" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard13" to="Hazard13" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard14" to="Hazard14" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard15" to="Hazard15" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard16" to="Hazard16" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard17" to="Hazard17" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazard18" to="Hazard18" method="_on_body_entered"]
