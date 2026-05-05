@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://k826d7ukion3" path="res://personaje/nivel de prueba/nivel_1.gd" id="1_ol0td"]
 [ext_resource type="Texture2D" uid="uid://vqxqdy05qy53" path="res://arte/Autumn.png" id="2_ai75a"]
 [ext_resource type="PackedScene" uid="uid://dnp6b22uqnohl" path="res://personaje/helado_f.tscn" id="3_1col5"]
+[ext_resource type="Script" uid="uid://bm6ykqek32qfv" path="res://personaje/nivel de prueba/camera_2d_2.gd" id="4_cdqb5"]
 [ext_resource type="PackedScene" uid="uid://b0gdtblml52sw" path="res://elementos/heladollegada.tscn" id="4_sfkl1"]
 [ext_resource type="Script" uid="uid://mgoo70igw42p" path="res://elementos/heladollegada3.gd" id="5_ai75a"]
 [ext_resource type="PackedScene" uid="uid://c0u66ydpprkih" path="res://elementos/hazard.tscn" id="5_cdqb5"]
@@ -81,6 +82,15 @@ tile_set = SubResource("TileSet_v8ff1")
 [node name="HeladoF" parent="." unique_id=1191648017 instance=ExtResource("3_1col5")]
 position = Vector2(75, 494)
 scale = Vector2(0.6, 0.6)
+
+[node name="Camera2D2" type="Camera2D" parent="HeladoF" unique_id=744371130]
+limit_left = 1150
+limit_top = -225
+limit_right = 0
+limit_bottom = 650
+limit_smoothed = true
+position_smoothing_enabled = true
+script = ExtResource("4_cdqb5")
 
 [node name="heladollegada" parent="." unique_id=815428152 instance=ExtResource("4_sfkl1")]
 position = Vector2(1049, 521)
@@ -176,8 +186,8 @@ scale = Vector2(2, 2)
 
 [node name="Fondodefabrica" type="Sprite2D" parent="." unique_id=1525735330]
 z_index = -1
-position = Vector2(573.5, 286)
-scale = Vector2(1.42875, 1)
+position = Vector2(573.5, 242.50002)
+scale = Vector2(1.42875, 1.4363958)
 texture = ExtResource("7_1col5")
 
 [connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]
