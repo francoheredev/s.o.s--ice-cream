@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://urggl4qgtbiu"
+path="res://.godot/imported/Takeover - Abyss.mp3-5dc7338add09263efeb2cf4d78ed68af.mp3str"
+
+[deps]
+
+source_file="res://Takeover - Abyss.mp3"
+dest_files=["res://.godot/imported/Takeover - Abyss.mp3-5dc7338add09263efeb2cf4d78ed68af.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

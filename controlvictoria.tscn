@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cwvex3ajh1cs2"]
+
+[node name="controlvictoria" type="CanvasLayer" unique_id=2095320007]
+
+[node name="WinLabel" type="Label" parent="." unique_id=887819581]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "NIVEL COMPLETADO!!, SIGUIENTE"

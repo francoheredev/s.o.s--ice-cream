@@ -58,15 +58,16 @@ var last_dir := 1  # 1 = derecha, -1 = izquierda
 # MUERTE
 # --------------------
 var dead := false
-
+var can_move := true
 @onready var anim = $AnimatedSprite2D
 @onready var run_particles = $RunParticles
 
 
 func _physics_process(delta):
-	if dead:
+	if dead or not can_move:
+		velocity = Vector2.ZERO
+		move_and_slide()
 		return
-
 	var input_dir = Input.get_axis("move_left", "move_right")
 	var is_running = Input.is_action_pressed("run")
 	var on_floor = is_on_floor()

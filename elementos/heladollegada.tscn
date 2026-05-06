@@ -91,6 +91,7 @@
 [ext_resource type="Texture2D" uid="uid://rustfw0a7t7w" path="res://arte/personajellegada0088.png" id="89_h4721"]
 [ext_resource type="Texture2D" uid="uid://ca25qhiagj0uf" path="res://arte/personajellegada0089.png" id="90_vf4ft"]
 [ext_resource type="Texture2D" uid="uid://cmeiww7dnrfbo" path="res://arte/personajellegada0090.png" id="91_cy68g"]
+[ext_resource type="AudioStream" uid="uid://dua0036hhj3yj" path="res://arte/freesound_community-blip2-104103.mp3" id="92_w2nys"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6i84x"]
 height = 26.0
@@ -759,8 +760,10 @@ offset_left = -69.0
 offset_top = -44.0
 offset_right = 72.0
 offset_bottom = -21.0
-text = "HELP ME PLEASE!!!"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1800170153]
+stream = ExtResource("92_w2nys")
+volume_db = -10.0
+max_polyphony = 4
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

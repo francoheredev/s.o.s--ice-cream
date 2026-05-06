@@ -1,14 +1,39 @@
 [gd_scene format=3 uid="uid://dypifg7k1g7ko"]
 
+[ext_resource type="Script" uid="uid://boahxv2d3kgf4" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://ydrybmpcrgai" path="res://personaje/nivel de prueba/pink-strawberry-ice-cream-seamless-260nw-2619310181.webp" id="2_ouk20"]
+[ext_resource type="Texture2D" uid="uid://d10bcl6o7qq1w" path="res://personaje/nivel de prueba/Gemini_Generated_Image_t8pzjot8pzjot8pz.png" id="3_mae5d"]
+
 [node name="menu" type="Control" unique_id=1651729675]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_lti8b")
 
 [node name="Button" type="Button" parent="." unique_id=95082186]
 layout_mode = 0
-offset_left = 476.0
-offset_top = 251.0
-offset_right = 647.0
-offset_bottom = 383.0
-text = "Play
+offset_left = 475.0
+offset_top = 304.0
+offset_right = 646.0
+offset_bottom = 355.0
+text = "JUGAR
 "
+
+[node name="PinkStrawberryIceCreamSeamless260Nw2619310181" type="Sprite2D" parent="." unique_id=1095120729]
+visible = false
+z_index = -1
+position = Vector2(574.75, 361)
+scale = Vector2(2.0583482, 2.6)
+texture = ExtResource("2_ouk20")
+
+[node name="GeminiGeneratedImageT8Pzjot8Pzjot8Pz" type="Sprite2D" parent="." unique_id=2108004217]
+z_index = -1
+position = Vector2(576, 364)
+texture = ExtResource("3_mae5d")
+
+[node name="Button2" type="Button" parent="." unique_id=628721098]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 367.0
+offset_right = 644.0
+offset_bottom = 415.0
+text = "SALIR"

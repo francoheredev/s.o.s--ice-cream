@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cij0aw3o7simp"]
+
+[ext_resource type="Script" uid="uid://ea8e3txlog8v" path="res://pausemenu.gd" id="1_v2lfg"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1757879956]
+
+[node name="pausemenu" type="Control" parent="." unique_id=837398774]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_v2lfg")
+
+[node name="Panel" type="Panel" parent="pausemenu" unique_id=994050776]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ResumeButton" type="Button" parent="pausemenu/Panel" unique_id=1772381883]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="QuitButton" type="Button" parent="pausemenu/Panel" unique_id=1384980253]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

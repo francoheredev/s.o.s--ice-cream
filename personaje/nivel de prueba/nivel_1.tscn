@@ -90,6 +90,7 @@ offset_bottom = 43.0
 text = "00:00"
 
 [node name="DeathLabel" type="Label" parent="CanvasLayer" unique_id=233308635]
+visible = false
 offset_left = 20.0
 offset_top = 50.0
 offset_right = 103.0
@@ -104,6 +105,7 @@ scale = Vector2(1.531875, 1.3966432)
 texture = ExtResource("7_6af6s")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1953833582]
+modulate = Color(0.5890956, 0.5890956, 0.5890956, 1)
 tile_set = SubResource("TileSet_lrvwv")
 rendering_quadrant_size = 22
 format = 2
@@ -121,5 +123,21 @@ z_index = -2
 position = Vector2(551, 301)
 scale = Vector2(1, 1.2994792)
 texture = ExtResource("9_453gr")
+
+[node name="CanvasModulate" type="CanvasLayer" parent="." unique_id=2041268416]
+
+[node name="WinLabel2" type="Label" parent="CanvasModulate" unique_id=1796726846]
+visible = false
+modulate = Color(0.607977, 0.53883994, 0, 1)
+anchors_preset = -1
+anchor_left = 0.38300002
+anchor_top = 0.252
+anchor_right = 0.38300002
+anchor_bottom = 0.252
+offset_left = 51.783997
+offset_top = 113.703995
+offset_right = 308.784
+offset_bottom = 136.704
+text = "NIVEL COMPLETADO!!, SIGUIENTE"
 
 [connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]
